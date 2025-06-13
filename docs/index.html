@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <title>AVARUN by avawalk</title>
+    <title>Thunder Rush</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="ava.css?t=241206">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
@@ -14,11 +14,11 @@
 </head>
 
 <body id="t" class="offline">
-    <div class='topnav'>
+    <!--div class='topnav'>
       <a class="nes-btn is-warning" href='./nut/'>Nut</a>
       <a class="nes-btn is-primary" href='https://www.tiktok.com/@apecoftonderock/video/7443354895115226375' target='_blank'>Music</a>
       <a class="nes-btn is-success" href='./board.html'>Rank</a>
-    </div>
+    </div-->
     <div id="messageBox" class="sendmessage">
          <!--h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">Press Space to start</h1-->
          <div class="niokbutton" onclick="okbuttonsend()"></div>
@@ -37,7 +37,7 @@
             </template>
         </div>
     </div>
-    <audio id="ava_song" src="https://avawalk.github.io/avarun/assets/AVA_Song.mp3" loop></audio>
+    <audio id="ava_song" src="https://diewcoftza.github.io/tunder-rush/assets/AVA_Song.mp3" loop></audio>
     <audio id="yadome" src="https://avawalk.github.io/avarun/assets/yadome.mp3"></audio>
 </body>
 
@@ -57,10 +57,10 @@
   };
 
   // kub track
-  let flag = localStorage.getItem('AVA_FLAG');
-  if (flag === 'KUB') {
-    document.getElementById('ava_song').src = "https://avawalk.github.io/avarun/assets/AVA_KUB.mp3";
-  }
+  //let flag = localStorage.getItem('AVA_FLAG');
+  //if (flag === 'KUB') {
+  //  document.getElementById('ava_song').src = "https://avawalk.github.io/avarun/assets/AVA_KUB.mp3";
+  //}
 
   // prevent mp3 cache
   let ts = +(new Date());

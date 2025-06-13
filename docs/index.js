@@ -58,7 +58,7 @@
         this.audioBuffer = null;
         this.soundFx = {};
         this.avaSong = document.getElementById('ava_song');
-        this.yadome = document.getElementById('yadome');
+        //this.yadome = document.getElementById('yadome');
 
         // Global web audio context for playing sounds.
         this.audioContext = null;
@@ -783,7 +783,7 @@
          * Game over state.
          */
         gameOver: function () {
-            this.yadome.play(); //this.playSound(this.soundFx.HIT);
+            this.playSound(this.soundFx.HIT); //this.yadome.play();
             vibrate(200);
 
             this.stop();
@@ -815,11 +815,11 @@
             this.avaSong.currentTime = 0;
 
             // upload scoreboard
-            let code = localStorage.getItem('AVA_FLAG') || 'AVA';
-            let score = this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
-            let secret = 'DONTHACKMEBRO';
-            console.log(`add ${score} scores for ${code}`);
-            $.post('./apis/?', { code: code, score: score, secret: secret }, resp => console.log(resp))
+            //let code = localStorage.getItem('AVA_FLAG') || 'AVA';
+            //let score = this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
+            //let secret = 'DONTHACKMEBRO';
+            //console.log(`add ${score} scores for ${code}`);
+            //$.post('./apis/?', { code: code, score: score, secret: secret }, resp => console.log(resp))
         },
 
         stop: function () {
