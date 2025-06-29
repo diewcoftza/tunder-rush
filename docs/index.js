@@ -815,11 +815,14 @@
             this.avaSong.currentTime = 0;
 
             // upload scoreboard
-            //let code = localStorage.getItem('AVA_FLAG') || 'AVA';
-            //let score = this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
-            //let secret = 'DONTHACKMEBRO';
-            //console.log(`add ${score} scores for ${code}`);
-            //$.post('./apis/?', { code: code, score: score, secret: secret }, resp => console.log(resp))
+            let code = localStorage.getItem('AVA_FLAG') || 'TDR';
+            let score = this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
+            let secret = atob('ZmFzdGVydGhhbmxpZ2h0');
+            console.log(`add ${score} scores for ${code}`);
+            $.post('https://api.diewland.com/leaderboard/', {
+              board: 'tunder', code: code,
+              score: score, secret: secret,
+            }, resp => console.log(resp))
         },
 
         stop: function () {
