@@ -1,7 +1,7 @@
 const COUNTRIES = [
-    ["FiniK Express", "FNK", "🟩"],
-    ["Eazy Express", "EZY", "🟦"],
     ["Tunder Express", "TDR", "⚡"],
+    ["Eazy Express", "EZY", "🟦"],
+    ["FiniK Express", "FNK", "🟩"],
     //
     ["Afghanistan", "AF", "🇦🇫"],
     ["Albania", "AL", "🇦🇱"],
