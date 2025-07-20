@@ -521,7 +521,7 @@
             window.addEventListener(Runner.events.FOCUS,
                 this.onVisibilityChange.bind(this));
 
-            // play ava song
+            // hook game start (1/2)
             this.avaSong.play();
         },
 
@@ -817,11 +817,13 @@
             // upload scoreboard
             let code = localStorage.getItem('AVA_FLAG') || 'TDR';
             let score = this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
-            let secret = atob('ZmFzdGVydGhhbmxpZ2h0');
-            console.log(`add ${score} scores for ${code}`);
+            let stime = Math.floor(this.runningTime / 1000);
+            let secret = 'ZmFzdGVydGhhbmxpZ2h0';
+            console.log(`add ${score} scores for ${code} (${stime}s)`);
             $.post('https://api.diewland.com/leaderboard/', {
               board: 'tunder', code: code,
-              score: score, secret: secret,
+              score: score, secret: atob(secret),
+              screen_time: stime,
             }, resp => console.log(resp))
         },
 
@@ -860,7 +862,7 @@
                 this.invert(true);
                 this.update();
 
-                // play ava song
+                // hook game start (2/2)
                 this.avaSong.play();
             }
         },
